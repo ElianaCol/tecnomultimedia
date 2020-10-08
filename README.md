@@ -1,2 +1,0 @@
-Lo que agregué en esta entrega:
-Creé un array para las imágenes y usé un for para cargarlas, también pude reutilizar los botones que repetían en varias pantallas creando dos funciones para llamarlos desde otra pestaña y evitar crearlos en cada estado. Modifiqué los errores del tp anterior y ahora se navega sólo con el mouse y la tecla enter.
