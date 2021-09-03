@@ -1,1 +1,1 @@
-# tecnomultimedia
+La aventura va a estar basada en el episodio de Bob Esponja "Rock Bottom". Después de quedarse atrapado en un lugar muy lejos de su casa, Bob tiene que resolver cómo volver a Bikini Bottom, el mayor conflicto es que nunca alcanza los colectivos de regreso, por lo que tiene que conservar la cordura y esperar en la parada o buscar alguna otra forma de volver a casa. 
