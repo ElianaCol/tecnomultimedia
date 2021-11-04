@@ -15,5 +15,6 @@ void draw() {
 void mousePressed() {
   juego.recolectarMonedas();
   juego.recolectarMonedasFalsas();
+  tiempo.reinicio();
 
 }

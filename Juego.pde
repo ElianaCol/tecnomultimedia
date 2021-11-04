@@ -6,7 +6,7 @@ class Juego {
   int cantFalsas = 10;
   PImage inicio, ganar;
   PImage moneda, monedaFalsa, clip, papel;
-  
+
   Elemento [] basura = new Elemento [cantBasura];
   Elemento [] monedas = new Elemento [cantMonedas];
   Falsas [] falsas = new Falsas [cantFalsas];
@@ -61,7 +61,8 @@ class Juego {
     for (int i=0; i<falsas.length; i++) {
       float d = dist (mouseX, mouseY, falsas[i].posXFalsas, falsas[i].posYFalsas);
       if (d<=falsas[i].tamFalsas && pantalla == 1) {
-        fill(255);
+        fill(255,0,0);
+        textSize(15);
         text("para qué guardo estas monedas!?", mouseX, mouseY);
         if (mousePressed) {
           contador--;
@@ -72,9 +73,6 @@ class Juego {
   void dibujarPantalla() {
     if (pantalla == 0) {
       image(inicio, 0, 0, width, height);
-      if (keyCode==ENTER) {
-        pantalla=1;
-      }
     }
     if (contador >= 50) {
       pantalla = 2;
@@ -85,15 +83,34 @@ class Juego {
       fill(225);
       text("iniciar", 180, 380);
     }
-    if(pantalla==3){
-     tiempo.reinicio();
+    if (tiempo.time<0) {
+      pantalla=3;
+      image(tiempo.perder, 0, 0, width, height);
+      fill(255);
+      text("No recolectaste las monedas a tiempo", 200, 30);
     }
-    
+    if (pantalla == 3 || pantalla == 2) {
+      dibujarBotones();
+      if (mouseX > 50 && mouseX < 50+130 && mouseY > 350 && mouseY < 350+50 ) {
+       // if(mousePressed);
+        //tiempo.reinicio();
+      }
+    }
+  }
+
+  void dibujarBotones() {
+    fill(0);
+    rect(50, 350, 130, 50);
+    rect(240, 350, 130, 50);
+    fill(255);
+    textAlign(CENTER);
+    text("Seguir", 300, 380);
+    text("Intentarlo\n de nuevo", 110, 370);
   }
   void botones( int x, int y, int tamX, int tamY) {
     if (mouseX > x && mouseX < x + tamX && mouseY > y && mouseY < y + tamY) {
       if (mousePressed) {
-        pantalla++;
+        tiempo.reinicio();
       }
     } 
     noStroke();

@@ -22,14 +22,14 @@ class Tiempo {
         textSize(20);
         text(time/1000, 192, 20);
       } else if (time<0) {
-        image(perder, 0, 0, width, height);
-        text("No recolectaste la monedas a tiempo", 120, 30);
+        juego.pantalla=3;
+        reinicio();
       }
     }
   }
   void reinicio() {
     if (mousePressed) {
-      juego.pantalla=0;
+      juego.pantalla=1;
       tiempoInicio = millis();
       tiempoCant = 10000;
     }
