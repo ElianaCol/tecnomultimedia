@@ -5,7 +5,7 @@ class Elemento {
   float tamBasura, tamMonedas;
   color cB, cM;
   boolean recolectada;
-  //CONSTRUCTOR
+
   Elemento () {
     ellipseMode(RADIUS);
     posXB=random(30, width-50);
@@ -19,18 +19,14 @@ class Elemento {
     recolectada = false;
   }
 
-  //METODOS
   void dibujarBasura() {
     image(juego.clip,posXB, posYB,tamBasura, tamBasura);
     image(juego.papel,posXB, posYB,tamBasura, tamBasura);
-    //fill(255);
-    //square(posXB, posYB, tamBasura);
   }
   void dibujarMonedas() {
     if (!recolectada) {
       fill(cM);
       image(juego.moneda,posXM, posYM,tamMonedas, tamMonedas);
-     // circle(posXM, posYM, tamMonedas);
     } else {
       posXM = width+10;
       posYM = width+10;

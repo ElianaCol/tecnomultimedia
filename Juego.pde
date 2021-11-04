@@ -1,18 +1,16 @@
 class Juego {
-  //CAMPOS
   float te;
-  int pantalla;
-  int contador;
+  int pantalla, contador;
   int cantBasura = 30;
   int cantMonedas = 15;
   int cantFalsas = 10;
   PImage inicio, ganar;
- // PImage [] moneda = new PImage [cantMonedas];
- PImage moneda, monedaFalsa, clip, papel;
+  PImage moneda, monedaFalsa, clip, papel;
+  
   Elemento [] basura = new Elemento [cantBasura];
   Elemento [] monedas = new Elemento [cantMonedas];
   Falsas [] falsas = new Falsas [cantFalsas];
-  //CONSTRUCTOR
+
   Juego () {
     pantalla = 0;
     for (int i=0; i < basura.length; i++) {
@@ -30,10 +28,8 @@ class Juego {
     monedaFalsa=loadImage("monedasFalsas.png");
     clip=loadImage("Basura1.png");
     papel=loadImage("Basura2.png");
-    //perder=loadImage("img1.jpg");
   }
 
-  //METODOS
   void dibujarJuego() {
     for (int i=0; i<basura.length; i++) {
       for (int j=0; j<monedas.length; j++) {
@@ -49,8 +45,6 @@ class Juego {
     fill(#02E0F2);
     text("Monedas  " + contador + "  /50", 270, 30);
     dibujarPantalla();
-
-    //////////////////////// TIEMPO /////////////////////////////
     tiempo.start();
   }
 
@@ -69,8 +63,8 @@ class Juego {
       if (d<=falsas[i].tamFalsas && pantalla == 1) {
         fill(255);
         text("para qué guardo estas monedas!?", mouseX, mouseY);
-        if(mousePressed){
-        contador--;
+        if (mousePressed) {
+          contador--;
         }
       }
     }
@@ -79,11 +73,11 @@ class Juego {
     if (pantalla == 0) {
       image(inicio, 0, 0, width, height);
       if (keyCode==ENTER) {
-        pantalla=1; //pantalla juego
+        pantalla=1;
       }
     }
     if (contador >= 50) {
-      pantalla = 2; //pantalla ganar
+      pantalla = 2;
       image(ganar, -50, 0, 600, height);
     }
     if (pantalla==0) {
@@ -91,11 +85,14 @@ class Juego {
       fill(225);
       text("iniciar", 180, 380);
     }
+    if(pantalla==3){
+     tiempo.reinicio();
+    }
+    
   }
   void botones( int x, int y, int tamX, int tamY) {
     if (mouseX > x && mouseX < x + tamX && mouseY > y && mouseY < y + tamY) {
       if (mousePressed) {
-        //tiempo.iniciar();
         pantalla++;
       }
     } 
