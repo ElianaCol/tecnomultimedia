@@ -20,7 +20,8 @@ class Tiempo {
         rect(150, 0, 100, 30);
         fill(255);
         textSize(20);
-        text(time/1000, 192, 20);
+        textAlign(CENTER);
+        text(time/1000, 200, 20);
       } else if (time<0) {
         juego.pantalla=3;
       }

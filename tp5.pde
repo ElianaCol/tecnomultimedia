@@ -1,3 +1,9 @@
+/* Eliana Iguain Iafrate
+ Tecnología Multimedial I
+ TP#5: Mini Juego
+ Link al video: 
+ */
+
 Juego juego;
 Tiempo tiempo;
 void setup() {
@@ -7,7 +13,7 @@ void setup() {
 }
 
 void draw() {
-  background(#9B7E2D);
+  background(#9B6F2D);
   juego.dibujarJuego();
   juego.recolectarMonedasFalsas();
   if(juego.getPantalla()>1){

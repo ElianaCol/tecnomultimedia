@@ -76,6 +76,8 @@ class Juego {
     if (contador >= 50) {
       pantalla = 2;
       image(ganar, -50, 0, 600, height);
+      fill(0);
+      text("Lo lograste, Bob y Patricio llegan a casa", 200, 30);
     }
     if (pantalla==0) {
       botones( 140, 350, 130, 50);
