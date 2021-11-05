@@ -1,7 +1,7 @@
 /* Eliana Iguain Iafrate
  Tecnología Multimedial I
  TP#5: Mini Juego
- Link al video: 
+ Link al video: https://www.youtube.com/watch?v=ioOs5m7-Q_g
  */
 
 Juego juego;
