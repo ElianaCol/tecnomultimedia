@@ -9,7 +9,7 @@ class Tiempo {
   }
 
   void start() {
-      if (juego.getPantalla()==0) {
+    if (juego.getPantalla()==0) {
       tiempoInicio = millis();
     } else if (juego.getPantalla()==1) {
       time = (tiempoInicio + tiempoCant) - millis();
@@ -21,13 +21,12 @@ class Tiempo {
         textAlign(CENTER);
         text(time/1000, 350, 35);
       } else if (time<1) {
-        //3) No accedo a las propiedades directamente
         juego.cambiarAPantalla(3);
       }
     }
     println(time);
   }
-  
+
   void reiniciar() {
     tiempoInicio = millis();
     tiempoCant = 1000;

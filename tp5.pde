@@ -1,7 +1,7 @@
 /* Eliana Iguain Iafrate
  Tecnología Multimedial I
- TP#5: Mini Juego Recuperatorio
- Link al video: 
+ TP#5: Minijuego Recuperatorio
+ Link al video: https://youtu.be/MslgJehx6QY
 */
 
 Tiempo tiempo;

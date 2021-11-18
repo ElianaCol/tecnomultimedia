@@ -1,5 +1,4 @@
 class Juego {
- //2) Solo cargo las imágenes en las clases correspondientes
   PImage inicio, ganar, perder;
   int pantalla, contador;
   int cantBasura = 35;
@@ -137,7 +136,7 @@ class Juego {
       }
     }
   }
-//1)Bug: no reiniciaba el contador
+
   void reiniciar() {
     contador=0;
     pantalla=0;

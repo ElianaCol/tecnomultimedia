@@ -1,5 +1,4 @@
 class Moneda {
-  //4) Clases separas de monedas y basura
   PImage monedaOriginal, monedaFalsa;
   float posXM, posYM;
   float tamMoneda;
