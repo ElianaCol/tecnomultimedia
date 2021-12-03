@@ -1,6 +1,6 @@
 /* Eliana Iguain Iafrate
  Tecnología Multimedial I
- TP#5: Minijuego Recuperatorio
+ TP Final: Aventura + Video Juego
  Link al video: https://www.youtube.com/watch?v=MsDOzvgOYro
  */
 Aventura aventura;
